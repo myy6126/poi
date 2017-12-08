@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class NameTreeMain {
 
-    //project_id,source,related_name,related_id,related_url,status
+    // column
     private static final String PROJECT_ID = "project_id";
     private static final String SOURCE = "source";
     private static final String RELATED_NAME = "related_name";
@@ -22,8 +22,10 @@ public class NameTreeMain {
     private static final String RELATED_URL = "related_url";
     private static final String STATUS = "status";
 
+    // targetFileName
     private static final String FILENAME = "12-07匹配失败结果.xlsx";
 
+    // sql
     private static final String INSERT_TREE = "insert into `project_crawl_tree` (%s) VALUES(%s); ";
     private static final String UPDATE_TREE = "update `project_crawl_tree` set project_id = %s , status = %s where id = %s;";
     private static final String UPDATE_NAME = "update `project_name_crawl` set status = %s where id = %s;";
@@ -90,7 +92,7 @@ public class NameTreeMain {
 
 
         if (insetTreeSql != null) {
-            FileIOUtils.fileWrite( time + INSERT_TREE_FILE_NAME, insetTreeSql);
+            FileIOUtils.fileWrite(time + INSERT_TREE_FILE_NAME, insetTreeSql);
         }
         if (updateNameSql != null) {
             FileIOUtils.fileWrite(time + UPDATE_NAME_FILE_NAME, updateNameSql);
