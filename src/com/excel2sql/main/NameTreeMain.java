@@ -211,7 +211,7 @@ public class NameTreeMain {
             insertSql = String.format(INSERT_TREE, column.toString(), value.toString());
             insertTreeSb.append(insertSql + "\n");
             if (id != null) {
-                updateSql = String.format(UPDATE_NAME, "2", id);
+                updateSql = String.format(UPDATE_NAME, "3", id);
                 updateNameSb.append(updateSql + "\n");
             }
 
